@@ -4,7 +4,7 @@ converting xml image labels to csv format to upload to MBARI's FathomNet
 Link to FathomNet: https://www.mbari.org/fathomnet/
 
 ## Background
-Research Alexa Runyan manually labeled 1000's of underwater images. Using a Classification ML algorithm, she identified six different species of urchin. MBARI's FathomNet was debuted in 2021 and has required formats for contributing to their 'database' of labeled images. There is great interest in making Runyan's datasets available to FathomNet to further ocean science.
+Researcher Alexa Runyan manually labeled 1000's of underwater images. Using a Classification ML algorithm, she identified six different species of urchin. MBARI's FathomNet was debuted in 2021 and has required formats for contributing to their 'database' of labeled images. There is great interest in making Runyan's datasets available to FathomNet to further ocean science.
 
 ## Problem
 FathomNet's required format for uploads differs from the format used by Runyan. Thus, there is a need to automate the process of converting between formats.
