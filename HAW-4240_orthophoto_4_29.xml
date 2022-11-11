@@ -1,0 +1,14 @@
+<annotation>
+	<folder>Urchin_Cropped_Val_Set</folder>
+	<filename>HAW-4240_orthophoto_4_29.xml</filename>
+	<path>C:/Users/alexa/Desktop/Urchin Research/Urchin_Cropped_Val_Set\HAW-4240_orthophoto_4_29.xml</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1000</width>
+		<height>1000</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	</annotation>
