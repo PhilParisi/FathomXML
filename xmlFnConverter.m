@@ -30,15 +30,16 @@ if isfield(y.annotation, 'object') % check for field 'object' in struct
         ymax = str2num(y.annotation.object{i}.bndbox.ymax.Text);
         
         % create struct of class object
+        object.filename = xml_filename;
         object.class = name;
-        object.url = ('url placeholder');
+        object.url = ('url_placeholder');
         object.x = xmin;
         object.y = ymin;
         object.width = xmax - xmin;
         object.height = ymax - ymin;
         object.location = loc;
         
-        xmlToCsvAppend(object, csv_filename); % aopend object to CSV file
+        xmlToCsvAppend(object, csv_filename); % append object to CSV file
     end
     
 else 
