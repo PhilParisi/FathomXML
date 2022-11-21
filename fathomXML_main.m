@@ -8,41 +8,34 @@
 
 clc, clearvars
 
+
 %%%%%%%%%% INPUT PARAMETERS
 output_csv_name = strcat("FathomData_",string(datetime),".xlsx");
 
-
 % Gather xml File Data
-DirInfo = dir('*.xml'); %        % set to grab all .tiff images
-imgNames = {DirInfo.name}; %names
-%imgPaths = {DirInfo.folder}; %long path to folder
-imgNames = string(imgNames);
+DirInfo = dir('*.xml');         % set to grab all .tiff images
+imgNames = {DirInfo.name};      % img file names
+imgNames = string(imgNames);    % convert to strings
 
-% Generate Full File Names
+tic
+%%%%%%%%%% GENERATE CSV
+
+% Loop of Images and Convert XMLs to CSV
 for i = 1:length(imgNames) % loop over each xml file
     
-    % Construct full xml file path
-    %temp_file_path = strcat(imgPaths(i),"\",imgNames(i));
+    % print counter
+    disp(strcat("Photo ",string(i)))
+
+    % Pull file path
     temp_file_path = imgNames(i);
 
-    % Parse xml into a structure 
+    % Parse xml into a structure, append to CSV 
     xmlFnConverter(temp_file_path, output_csv_name);
-    
-    % Check if objects exist
-    %for j = 1:length(3) % loop over each object
-       
-        
-            
-        
-        % Write Struct to csv
-     %   xmlToCsvAppend(struct, output_csv);
-        
-    %end
-    
-    % Construct for each object
-    
     
 end
 
+%%%%%%%%%% PROGRAM OUTPUTS
+run_time = toc;
 
-
+disp(strcat("Finished! Data stored here --> ", output_csv_name))
+disp(strcat("Runtime was ", string(run_time),"secs"))

@@ -11,7 +11,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function xmlParser(xml_filename,csv_filename)
+function xmlFnConverter(xml_filename,csv_filename)
 
 y = xml2struct(xml_filename); % create nested struct from XML file
 
